@@ -1,6 +1,6 @@
-function redraw () {
+(function redraw () {
 
-  f++;
+  console.log(_.frame)
 
   var x1 = Math.random() * img.width
     , y1 = Math.random() * img.height
@@ -38,4 +38,6 @@ function redraw () {
     //}
   //}
 
-}
+  window.requestAnimationFrame(_.redraw)
+
+})

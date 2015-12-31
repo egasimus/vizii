@@ -1,6 +1,10 @@
-(function () {
+(function (app) {
 
-  console.log(_.data)
+  console.log(app)
+
+  _.resize()
+  _.util.throttle("resize", "optimizedResize")
+  window.addEventListener('optimizedResize', function () { _.resize() });
 
   _.resize()
   _.init()
