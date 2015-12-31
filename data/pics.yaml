@@ -1,0 +1,15 @@
+pics:
+  - label: klimt
+    url:   https://upload.wikimedia.org/wikipedia/commons/d/de/Philosophy-final-state-1907.jpg
+  - label: manjuvajramandala
+    url:   https://upload.wikimedia.org/wikipedia/commons/9/9a/Manjuvajramandala_con_43_divinit%C3%A0_-_Unknown_-_Google_Cultural_Institute.jpg
+  - label: manifestazione interventista
+    url:   https://nyoobserver.files.wordpress.com/2014/02/carra_manifestazione-interventista-gm8.jpg
+  - label: roerich
+    url:   https://upload.wikimedia.org/wikipedia/en/c/c4/N._Roerich_-_And_We_are_Trying._From_the_%C2%ABSancta%C2%BB_Series_-_Google_Art_Project.jpg
+  - label: cossacks
+    url:   https://upload.wikimedia.org/wikipedia/commons/7/73/Repin_Cossacks.jpg
+  - label: yabyum
+    url:   /data/yabyum.jpg
+  - label: pic
+    url:   /data/pic.jpg
