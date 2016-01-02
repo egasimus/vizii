@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adam Avramov <fallenblood@example.com> (http://github.com/egasimus)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "observ": "^0.2.0",
+    "observ-varhash": "^1.0.6",
+    "glagol": "2.0.0-rc1",
+    "glagol-web": "^0.1.0"
+  }
 }
