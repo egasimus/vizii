@@ -1,6 +1,10 @@
 (function redraw () {
 
-  console.log(_.frame)
+  console.log(0);
+
+  var state = _.state();
+
+  console.log(state.frame, state.img)
 
   var x1 = Math.random() * img.width
     , y1 = Math.random() * img.height
