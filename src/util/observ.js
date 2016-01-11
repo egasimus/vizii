@@ -1,3 +1,3 @@
-(function (key, val) {
+(function (val, key) {
   return require('observ')(val)
 })

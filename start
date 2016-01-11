@@ -10,6 +10,6 @@ var server = web.server(host, port, {
   0: web.app(opts, resolve(__dirname, './src'))
 })
 
-server.on('listening', function () {
+server.http.on('listening', function () {
   console.log('open ' + host + ':' + port + ' in default browser')
 })
