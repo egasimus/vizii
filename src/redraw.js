@@ -2,9 +2,11 @@
 
   console.log(0);
 
-  var state = _.state();
-
-  console.log(state.frame, state.img)
+  var state   = _.state()
+    , canvas  = state['canvas']
+    , context = canvas.getContext('2d')
+    , img     = state['img']
+    , f       = state['frame'];
 
   var x1 = Math.random() * img.width
     , y1 = Math.random() * img.height
@@ -13,7 +15,7 @@
     , w  = x2 - x1
     , h  = y2 - y1
 
-  //context.globalAlpha = 0.5
+  context.globalAlpha = 0.1
 
   if (f % 3 === 0) context.drawImage(img,
     -x1 * canvas.width         / w,
@@ -21,13 +23,13 @@
     img.width  * canvas.width  / w,
     img.height * canvas.height / h);
 
-  if (f % 5 === 0) context.drawImage(img2,
-    -x1 * canvas.width         / w,
-    -y1 * canvas.height        / h,
-    img.width  * canvas.width  / w,
-    img.height * canvas.height / h);
+  //if (f % 5 === 0) context.drawImage(img2,
+    //-x1 * canvas.width         / w,
+    //-y1 * canvas.height        / h,
+    //img.width  * canvas.width  / w,
+    //img.height * canvas.height / h);
 
-  context.globalAlpha = 1
+  //context.globalAlpha = 1
   //context.fillStyle = 'black'
   //var data = context.getImageData(0, 0, canvas.width, canvas.height)
   //for (var i = 0; i < data.data.length; i++) {

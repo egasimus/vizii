@@ -1,4 +1,5 @@
 (function resize () {
-  _.canvas.width  = _.canvas.offsetWidth
-  _.canvas.height = _.canvas.offsetHeight
+  var canvas = _.state.get('canvas')
+  canvas.width  = canvas.offsetWidth
+  canvas.height = canvas.offsetHeight
 })

@@ -1,3 +1,4 @@
-require('observ-varhash')(
-  { frame: 0
-  , img:   null }, _.util.observ)
+_.util.varhash(
+  { frame:  0
+  , img:    null
+  , canvas: document.createElement('canvas') })
