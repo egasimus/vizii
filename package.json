@@ -9,9 +9,12 @@
   "author": "Adam Avramov <fallenblood@example.com> (http://github.com/egasimus)",
   "license": "ISC",
   "dependencies": {
+    "glagol": "2.0.0-rc2",
+    "glagol-web": "^0.2.0",
+    "insert-css": "^0.2.0",
+    "main-loop": "^3.2.0",
     "observ": "^0.2.0",
     "observ-varhash": "^1.0.6",
-    "glagol": "2.0.0-rc2",
-    "glagol-web": "^0.2.0"
+    "virtual-dom": "^2.1.1"
   }
 }

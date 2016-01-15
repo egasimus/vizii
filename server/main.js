@@ -1,4 +1,4 @@
-(function () {
+(function (app) {
   var web     = require('glagol-web')
     , resolve = require('path').resolve
     , client  = web.app({}, resolve(__dirname, '..', 'client'))
