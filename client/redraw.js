@@ -15,7 +15,7 @@
     , w  = x2 - x1
     , h  = y2 - y1
 
-  context.globalAlpha = 0.1
+  context.globalAlpha = 0.3
 
   if (f % 3 === 0) context.drawImage(img,
     -x1 * canvas.width         / w,
@@ -37,12 +37,14 @@
     ////pixel[2] = pixel[1]//;Math.pow(pixel, 1.5)
   //}
   //context.putImageData(data, 0, 0)
-  
+ 
   //for (var y = 0; y < canvas.height; y++) {
-    //if (y % 2 === 0) {
+    //if (y % 5 === 0) {
       //context.fillRect(0, y, canvas.width, 1)
     //}
   //}
+
+  _.state.frame.set(f+1)
 
   window.requestAnimationFrame(_.redraw)
 

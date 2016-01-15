@@ -1,6 +1,4 @@
-(function (app) {
-
-  console.log(app)
+(function () {
 
   _.util.throttle("resize", "optimizedResize")
   window.addEventListener('optimizedResize', function () { _.resize(); })
