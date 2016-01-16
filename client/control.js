@@ -1,4 +1,4 @@
-(function () {
+(function (app) {
 
   // https://github.com/Raynos/main-loop
   // needs to be passed the three methods from virtual-dom
@@ -10,6 +10,10 @@
   // updates DOM when state updates, but not too often
   // which is kind of the whole point of main-loop
   _.state(function (state) { mainloop.update(state) });
+
+  // also update DOM when templates have been edited
+  app.nodes['templates'].nodes['control.js'].events.on('edited',
+    function (evt) { mainloop.update(_.state()) })
 
   // this is inflexible: the contents of this function can't be readily
   // livecoded because it's part of a file that's evaluated only once.
