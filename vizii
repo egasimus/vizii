@@ -5,6 +5,6 @@ var resolve = require('path').resolve
   , server  = glagol(resolve(__dirname, 'server'))
   , options = glagol(resolve(__dirname, 'options'))
 
-server.mount(true, options);
+server.mount(options);
 
 server.tree.main(server);

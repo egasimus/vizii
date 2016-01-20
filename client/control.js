@@ -1,28 +1,15 @@
 (function (app) {
 
-  // https://github.com/Raynos/main-loop
-  // needs to be passed the three methods from virtual-dom
-  var mainloop = require('main-loop')(_.state(), render,
-    { create: require('virtual-dom/create-element')
-    , diff:   require('virtual-dom/diff')
-    , patch:  require('virtual-dom/patch') });
+  // instantiate a new view which watches the state for changes
+  var view = $.web.view(_.state, _.templates.control)
 
-  // updates DOM when state updates, but not too often
-  // which is kind of the whole point of main-loop
-  _.state(function (state) { mainloop.update(state) });
+  // replace document contents with the view's target element
+  document.body.innerHTML = "";
+  document.body.appendChild(view.target);
 
   // also update DOM when templates have been edited
   app.nodes['templates'].nodes['control.js'].events.on('edited',
     function (evt) { mainloop.update(_.state()) })
-
-  // this is inflexible: the contents of this function can't be readily
-  // livecoded because it's part of a file that's evaluated only once.
-  // you can freely edit templates/control.js thought.
-  function render (state) { return _.templates.control(state) }
-
-  // add the mainloop-managed element to the cleared document
-  document.body.innerHTML = "";
-  document.body.appendChild(mainloop.target);
 
   // in case anyone needs it...
   return mainloop;
