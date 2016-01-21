@@ -4,7 +4,8 @@
     , client  = web.app({}, resolve(__dirname, '..', 'client'))
     , host    = $.options.host
     , port    = $.options.port
-    , routes  = [ client.route('/'), client.route('/control') ]
+    , routes  = [ web.route('/',        client.handler)
+                , web.route('/control', client.handler) ]
     , server  = web.server(host, port, routes);
 
   server.http.on('listening', function () {
