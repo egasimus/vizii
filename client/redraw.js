@@ -15,7 +15,7 @@
     , w  = x2 - x1
     , h  = y2 - y1
 
-  context.globalAlpha = 0.1
+  context.globalAlpha = $.state.blend();
 
   if (f % 3 === 0) context.drawImage(img,
     -x1 * canvas.width         / w,
