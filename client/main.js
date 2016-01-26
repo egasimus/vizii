@@ -2,9 +2,11 @@
 
   console.log(app)
 
+  $.connect();
+
   switch (window.location.pathname) {
-    case "/":        _.display();    break;
-    case "/control": _.control(app); break;
+    case "/":        _.views.display();    break;
+    case "/control": _.views.control(app); break;
   }
 
 })

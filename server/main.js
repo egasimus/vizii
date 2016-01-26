@@ -9,8 +9,10 @@
     , server  = web.server(host, port, routes);
 
   server.http.on('listening', function () {
-    console.log('open ' + host + ':' + port + ' in default browser')
+    console.log('open ' + host + ':' + port + ' in your browser')
   })
+
+  server.socket.on("connection", function (socket) { $.connect(socket) });
 
   return server;
 })

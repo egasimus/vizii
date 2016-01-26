@@ -11,6 +11,9 @@
   "dependencies": {
     "glagol": "git://github.com/egasimus/glagol",
     "glagol-web": "git://github.com/egasimus/glagol-web",
-    "riko": "git://github.com/egasims/riko"
+    "q": "^1.4.1",
+    "q-api": "git+https://github.com/egasimus/q-api.git",
+    "q-connection": "^0.6.1",
+    "riko": "git://github.com/egasimus/riko"
   }
 }
