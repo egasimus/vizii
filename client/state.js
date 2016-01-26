@@ -9,5 +9,9 @@ require('riko').M(
       0
   , img:
       null
+  , src:
+      null
   , canvas:
-      document.createElement('canvas') })
+      document.createElement('canvas')
+  , css:
+      null })
