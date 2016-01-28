@@ -17,11 +17,14 @@
 
   context.globalAlpha = $.state.blend();
 
-  if (f % 3 === 0) context.drawImage(img,
-    -x1 * canvas.width         / w,
-    -y1 * canvas.height        / h,
-    img.width  * canvas.width  / w,
-    img.height * canvas.height / h);
+  //context.translate(img.width / 2, img.height / 2)
+  //context.rotate(Math.random() * Math.PI)
+
+  if (f % 2 === 0) context.drawImage(img,
+    x1, y1, w, h,
+    0, 0, canvas.width, canvas.height);
+
+  //context.setTransform(1, 0, 0, 1, 0, 0);
 
   //if (f % 5 === 0) context.drawImage(img2,
     //-x1 * canvas.width         / w,
