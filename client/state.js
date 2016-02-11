@@ -1,4 +1,4 @@
-require('riko').M(
+require('riko-mvc').M(
   { server:
       false
   , connection:

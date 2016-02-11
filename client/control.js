@@ -1,1 +1,1 @@
-require('riko').C($.events)
+require('riko-mvc').C($.events)

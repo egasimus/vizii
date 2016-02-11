@@ -1,4 +1,4 @@
-require('q-api/server')(function () {
+require('riko-api/server')(function () {
   return {
     "subscribe": function (cb) {
       if (cb) $.state(function (state) { cb(JSON.stringify(state)) })
